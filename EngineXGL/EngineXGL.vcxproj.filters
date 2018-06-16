@@ -16,6 +16,9 @@
     <Filter Include="Engine">
       <UniqueIdentifier>{a94402bc-9757-44ea-88d5-58953d21f79a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Source">
+      <UniqueIdentifier>{2c486005-7f93-45d1-8431-d0bfca69c886}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -36,6 +39,9 @@
     <ClInclude Include="Engine\SDL.h">
       <Filter>Engine</Filter>
     </ClInclude>
+    <ClInclude Include="Engine\exMatrix4.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -46,6 +52,9 @@
     </ClCompile>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine\Source\exMatrix4.cpp">
+      <Filter>Engine\Source</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
