@@ -111,3 +111,15 @@ struct exColor
 		mColor[3] = (char) a;
 	}
 };
+
+struct exColorF
+{
+	float mColor[4];
+	void SetColor(int r, int g, int b, int a)
+	{
+		mColor[0] = (char)r;
+		mColor[1] = (char)g;
+		mColor[2] = (char)b;
+		mColor[3] = (char)a;
+	}
+};
