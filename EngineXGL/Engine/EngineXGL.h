@@ -1,8 +1,9 @@
 #pragma once
 
 #include "Engine\EngineInterface.h"
-#include "Engine\SDL.h"
+#include "../SDL.h"
 #include "GLEW.h"
+#include "../Game/Header/Game.h"
 
 class exEngine : public exEngineInterface
 {
@@ -12,6 +13,8 @@ public:
 	void				Initialize();
 	void				Loop();
 
+
+	void				InitializeShaders();
 	// causes all initialization to occur and the main loop to start 
 	void				Run(exGameInterface* pGameInterface) override;
 
@@ -19,7 +22,7 @@ public:
 	void				DrawLine(const exVector2& v2P1, const exVector2& v2P2, const exColor& color, int nLayer) override {};
 
 	// draw a filled box
-	void				DrawBox(const exVector2& v2P1, const exVector2& v2P2, const exColor& color, int nLayer) override {};
+	void				DrawBox(const exVector2& v2P1, const exVector2& v2P2, const exColor& color, int nLayer) override;
 
 	// draw a box outline
 	void				DrawLineBox(const exVector2& v2P1, const exVector2& v2P2, const exColor& color, int nLayer) override {};

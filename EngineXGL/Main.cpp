@@ -9,41 +9,13 @@
 #include "stdafx.h"
 #include <windows.h>
 #include "Engine\EngineInterface.h"
-#include "GameInterface.h"
-#include "EngineXGL.h"
-
+#include "../EngineXGL/Game/Header/GameInterface.h"
+#include "Engine\EngineXGL.h"
+#include "Game\Header\Game.h"
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
 
 // this is could be better, think design patterns as to why
-//Pong gGame;
-
-class exGame : public exGameInterface
-{
-
-	// called when the engine is ready for the game to initialize
-	virtual void				Initialize(exEngineInterface* pEngine) {}
-
-	// to determine the name of the window
-	virtual const char*			GetWindowName() const { return "hello"; }
-
-	// to determine clear color
-	virtual void				GetClearColor(exColor& color) const 
-	{
-	
-	}
-
-	// called per event polled
-	// https://wiki.libsdl.org/SDL_Event
-	virtual void				OnEvent(SDL_Event* pEvent) {}
-
-	// called when events have all been processed, before simulation has happened
-	virtual void				OnEventsConsumed() {}
-
-	// run the simulation
-	virtual void				Run(float fDeltaT) {}
-
-};
 
 //-----------------------------------------------------------------
 //-----------------------------------------------------------------
@@ -76,7 +48,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	
 	exEngine engine;
 
-	exGame game;
+	Game game;
 	engine.Run(&game);
 
 	return 0;
